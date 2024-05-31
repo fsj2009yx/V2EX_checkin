@@ -1,4 +1,3 @@
-import time
 from DrissionPage import ChromiumPage
 import json
 import ddddocr
@@ -18,7 +17,6 @@ def input_user():
     ele_input=ele2.child()
     if(ele_input):
         ele_input.input(json_str['name'])
-        time.sleep(1)
 
 #输入密码
 def input_password():
@@ -27,7 +25,6 @@ def input_password():
     ele_input=ele2.child()
     if(ele_input):
         ele_input.input(json_str['password'])
-        time.sleep(1)
 
 #验证码处理
 def input_Code():
@@ -43,7 +40,6 @@ def input_Code():
         ocr=ddddocr.DdddOcr()
         Code=ocr.classification(bytes_str)
         ele_input.input(Code)
-        time.sleep(1)
 
 def login():
     ele1 = ele_parents.eles("text:机器人")[0]
@@ -62,7 +58,6 @@ def check_in():
     ele_coin=ele1.next()
     ele_coin.click()
     page.wait.load_start()
-    time.sleep(2)
 
 
 def main():
@@ -74,7 +69,6 @@ def main():
     ele_problem=page.eles(".problem")
     if ele_problem:
         print(ele_problem)
-        time.sleep(1)
         ele_parents=page.eles(".cell")[-1]  # 输入栏父节点
         main()
     else:
