@@ -1,12 +1,18 @@
 from DrissionPage import ChromiumPage
+from DrissionPage import ChromiumOptions
 import json
 import ddddocr
 
 #获取url
 with open('config.json', 'r') as file:
     json_str=json.load(file)#读取json文件并转成string列表
+    
+#浏览器配置
+co=ChromiumOptions()
+co.incognito()  # 匿名模式
+co.headless()  # 无头模式
 
-page = ChromiumPage()
+page = ChromiumPage(co)
 page.get(json_str['url'])
 ele_parents = page.eles(".cell")[-1]#输入栏父节点
 
