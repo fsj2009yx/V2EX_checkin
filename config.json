@@ -1,5 +1,7 @@
 {
-  "url": "https://v2ex.com/signin",
-  "name": "",
-  "password": ""
+    "base_url": "https://v2ex.com/",
+    "url_login": "https://v2ex.com/signin",
+    "name":"填入你的用户名" ,
+    "password":"填入你的密码" ,
+    "cookie": "None"
 }
