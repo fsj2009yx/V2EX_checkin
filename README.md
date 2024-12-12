@@ -1,1 +1,2 @@
-V2EX自动签到脚本
+# V2EX自动签到脚本
+使用DrissionPage自动化工具和ddddocr识别验证码，实现自动签到
